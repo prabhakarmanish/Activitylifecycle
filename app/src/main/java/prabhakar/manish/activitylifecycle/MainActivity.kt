@@ -11,8 +11,8 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("MainActivity","OnCreate")
-        Toast.makeText(this,"OnCreate",Toast.LENGTH_SHORT).show()
+        Log.d("onCreate","Nothing Visible")
+        Toast.makeText(this,"OnCreate - Nothing Visible",Toast.LENGTH_SHORT).show()
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -24,32 +24,32 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.d("MainActivity","OnStart")
-        Toast.makeText(this,"OnStart",Toast.LENGTH_SHORT).show()
+        Log.d("onStart","UI Visible but Not Interactive")
+        Toast.makeText(this,"OnStart - UI Visible but Not Interactive",Toast.LENGTH_SHORT).show()
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d("MainActivity","OnResume")
-        Toast.makeText(this,"OnResume",Toast.LENGTH_SHORT).show()
+        Log.d("onResume","Visible and Interactive")
+        Toast.makeText(this,"OnResume - Visible and Interactive",Toast.LENGTH_SHORT).show()
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d("MainActivity","OnPause")
-        Toast.makeText(this,"OnPause",Toast.LENGTH_SHORT).show()
+        Log.d("onPause","Maybe Visible or Not Visible")
+        Toast.makeText(this,"OnPause - Maybe Visible or Not Visible",Toast.LENGTH_SHORT).show()
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d("MainActivity","OnStop")
-        Toast.makeText(this,"OnStop",Toast.LENGTH_SHORT).show()
+        Log.d("onStop","Nolonger Visible")
+        Toast.makeText(this,"OnStop - Nolonger Visible",Toast.LENGTH_SHORT).show()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("MainActivity","OnDestroy")
-        Toast.makeText(this,"OnDestroy",Toast.LENGTH_SHORT).show()
+        Log.d("onDestroy","Resources get free")
+        Toast.makeText(this,"OnDestroy - Resources get free",Toast.LENGTH_SHORT).show()
     }
 
     override fun onRestart() {
